@@ -68,33 +68,50 @@ h1{
 cursor:not-allowed;
 }
 
-
-
-
 .game-cell.x::before,
-.game-cell.x::after{
+.game-cell.x::after,
+.game-cell.o::before
+{
      background-color: black;
      
 }
 
 
+
+
+.game-board.x .game-cell:not(.x):not(.o):hover::before, 
+.game-board.x .game-cell:not(.x):not(.o):hover::after,
+.game-board.o .game-cell:not(.x):not(.o):hover::before
+{
+     background-color: lightblue;
+}
+
+
+
+
 .game-cell.x::before,
-.game-cell.x::after{
+.game-cell.x::after,
+/* Only apply the hover effect when you are NOT an O or  X cell  */
+.game-board.x .game-cell:not(.x):not(.o):hover::before, 
+.game-board.x .game-cell:not(.x):not(.o):hover::after
+
+{
 
      content: '';
      position: absolute;
      width: calc(var(--xo-size) * .2);
      height: var(--xo-size); 
-     background-color: black;
-     
 }
 
 
-.game-cell.x::before{
+.game-cell.x::before,
+.game-board.x .game-cell:not(.x):not(.o):hover::before
+{
      transform: rotate(45deg);
 }
 
-.game-cell.x::after{
+.game-cell.x::after,
+.game-board.x .game-cell:not(.x):not(.o):hover::after{
      transform: rotate(-45deg);
 }
 
@@ -102,15 +119,12 @@ cursor:not-allowed;
 
 
 
-.game-cell.o::before,
-.game-cell.o::after{
-     background-color: black;
-     
-}
-
+ 
 
 .game-cell.o::before,
-.game-cell.o::after{
+.game-cell.o::after,
+.game-board.o .game-cell:not(.x):not(.o):hover::before, 
+.game-board.o .game-cell:not(.x):not(.o):hover::after{
 
      content: '';
      position: absolute;
@@ -119,20 +133,60 @@ cursor:not-allowed;
 }
 
 /* Larger Circle  */
-.game-cell.o::before{
+.game-cell.o::before,
+.game-board.o .game-cell:not(.x):not(.o):hover::before {
      width:  var(--xo-size); 
      height: var(--xo-size); 
+    
 }
 
 /* Smaller Inner Circle  */
-.game-cell.o::after{
+.game-cell.o::after,
+.game-board.o .game-cell:not(.x):not(.o):hover::after{
      width:  calc(var(--xo-size) * .65); 
      height: calc(var(--xo-size) * .65); 
-     background-color: aqua;
+     background-color: white;
 }
 
 
+.game-message{
+     display: none;
+     position: absolute;
+     left: 50%;
+     top: 85%;
+     -webkit-transform: translate(-50%, -40%);
+     transform: translate(-50%, -30%);
+     background-color: rgba(9, 29, 2, 0.9);
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     font-size: 4rem;
+     border: 1px solid lightblue;
+     flex-direction: column;
+     
+}
 
+.game-message button{
+     font-size: 2.5rem;
+     background-color: white;
+     border: 1px solid black;
+     padding: .25 em .5 em;
+     cursor: pointer;
+
+}
+
+.game-message button:hover{
+     background-color: black;
+     color: white;
+     border-color: white; 
+}
+
+.game-message.show{
+     display: flex;
+}
+
+ 
 
 /******************************************
 /* LAYOUT
