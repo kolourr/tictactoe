@@ -1,4 +1,4 @@
-<h1 align="center">Tic Tac Toe: <a href="https://kolourr.github.io/tictactoe/">100 Devs Push Work</a></h1>
+<h1 align="center">100 Devs Push Work:<a href="https://kolourr.github.io/tictactoe/">Tic Tac To</a></h1>
 <div align="center">
   <a href='https://kolourr.github.io/tictactoe/'>
 	  <img src="https://raw.githubusercontent.com/kolourr/tictactoe/main/tictactoe.png" width="100%" />
