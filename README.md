@@ -1,7 +1,7 @@
 <h1 align="center">Tic Tac Toe: <a href="https://kolourr.github.io/tictactoe/">100 Devs Push Work</a></h1>
 <div align="center">
   <a href='https://kolourr.github.io/tictactoe/'>
-	  <img src="https://raw.githubusercontent.com/kolourr/tictactoe/tictactoe.png" width="100%" />
+	  <img src="https://raw.githubusercontent.com/kolourr/tictactoe/main/tictactoe.png" width="100%" />
   </a>
 </div>
 
